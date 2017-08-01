@@ -1,11 +1,13 @@
 import React from 'react';
 import { Text, TouchableOpacity } from 'react-native';
 
-const Button = ({ whenPressed }) => {
+const Button = ({ whenPressed, children }) => {
   const { buttonStyle, textStyle } = styles;
   return (
     <TouchableOpacity onPress={whenPressed} style={buttonStyle}>
-      <Text style={textStyle}>Click Me!</Text>
+      <Text style={textStyle}>
+        {children}
+      </Text>
     </TouchableOpacity>
   );
 };
@@ -23,6 +25,8 @@ const styles = {
   textStyle: {
     alignSelf: 'center',
     color: '#006AFF',
+    paddingTop: 10,
+    paddingBottom: 10,
     fontSize: 16,
     fontWeight: '600'
   }
