@@ -32,7 +32,7 @@ const AlbumDetail = ({ album }) => {
         <Image style={imageStyle} source={{ uri: image }} />
       </CardSection>
       <CardSection>
-        <Button whenPressed={() => Linking.openURL(url)}>Buy Now</Button>
+        <Button whenPressed={() => Linking.openURL(url)}>Buy Now!</Button>
       </CardSection>
     </Card>
   );
